@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Main.css';
 import Blog from '../Blog/Blog';
 import TotalSpentTime from '../TotalSpentTime/TotalSpentTime';
+import BookmarkedBlog from '../BookmarkedBlog/BookmarkedBlog';
 
 const Main = () => {
     const [blogs, setBlog] = useState([]);
@@ -18,8 +19,9 @@ const Main = () => {
                     blogs.map(blog => <Blog blog={blog} key={blog.id}></Blog>)
                 }
             </div>
-            <div className='col-span-12 md:col-span-4 md:sticky md:top-0'>
+            <div className='col-span-12 md:col-span-4'>
                 <TotalSpentTime></TotalSpentTime>
+                <BookmarkedBlog></BookmarkedBlog>
             </div>
 
 

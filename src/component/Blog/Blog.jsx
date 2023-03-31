@@ -32,7 +32,7 @@ const Blog = ({ blog }) => {
                         <div><p>#{hash_tags[0]}</p></div>
                         <div><p>#{hash_tags[1]}</p></div>
                     </div>
-                    <div className="card-actions">
+                    <div className="card-actions mb-10">
                         <button className='text-blue-600/100 underline '>Mark as read</button>
                     </div>
                 </div>

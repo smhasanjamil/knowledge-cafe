@@ -3,7 +3,7 @@ import './Navbar.css';
 
 const Navbar = () => {
     return (
-        <div className='md:p-12'>
+        <div>
 
             <div className="navbar bg-base-100">
                 <div className="flex-1">

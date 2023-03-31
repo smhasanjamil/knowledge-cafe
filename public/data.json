@@ -1,0 +1,79 @@
+[
+    {
+        "id": "6425b71c7e83f9d09aa055b3",
+        "blog_picture": "https://images.pexels.com/photos/261579/pexels-photo-261579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "author_picture": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "time": 3,
+        "name": "Hurst Mathis",
+        "date": "2019-11-21T02:53:11 -06:00",
+        "blog_title": "ullamco aliquip et excepteur in",
+        "hash_tags": [
+            "proident",
+            "commodo"
+        ],
+        "friends": [
+            {
+                "id": "6425b71c107307c8c2fbbc02",
+                "name": "Marsha Kirk"
+            }
+        ]
+    },
+    {
+        "id": "6425b71c521ffdf841bd19a3",
+        "blog_picture": "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "author_picture": "https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "time": 4,
+        "name": "Salinas Horne",
+        "date": "2016-09-30T05:32:35 -06:00",
+        "blog_title": "laboris officia sint sint proident",
+        "hash_tags": [
+            "dolore",
+            "mollit"
+        ],
+        "friends": [
+            {
+                "id": "6425b71cb353b7f8d96a6302",
+                "name": "Terri Mcneil"
+            }
+        ]
+    },
+    {
+        "id": "6425b71cb30229db0e48a795",
+        "blog_picture": "https://images.pexels.com/photos/946250/pexels-photo-946250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "author_picture": "https://images.pexels.com/photos/1182825/pexels-photo-1182825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "time": 3,
+        "name": "Angie Montgomery",
+        "date": "2021-06-14T04:01:43 -06:00",
+        "blog_title": "sit esse fugiat magna mollit",
+        "hash_tags": [
+            "cillum",
+            "irure"
+        ],
+        "friends": [
+            {
+                "id": "6425b71c5a34de63a5f99710",
+                "name": "Arlene Bishop"
+            }
+        ]
+    },
+    {
+        "id": "6425b71c5f47e304ac1a3095",
+        "blog_picture": "https://images.pexels.com/photos/5212346/pexels-photo-5212346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "author_picture": "https://images.pexels.com/photos/709188/pexels-photo-709188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "time": 2,
+        "name": "Pansy Rivas",
+        "date": "2020-08-20T04:13:38 -06:00",
+        "blog_title": "proident veniam aute occaecat commodo",
+        "hash_tags": [
+            "minim",
+            "cupidatat"
+        ],
+        "friends": [
+            {
+                "id": "6425b71cda02db0c16e4fc22",
+                "name": "Penny Hurst"
+            }
+        ]
+    }
+    
+]

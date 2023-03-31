@@ -1,8 +1,10 @@
 import React from 'react';
 import './Blog.css';
 
-const Blog = ({ blog }) => {
-    const { id, auth_name, time, author_picture, blog_picture, blog_title, date, hash_tags } = blog;
+const Blog = (props) => {
+    const { id, auth_name, time, author_picture, blog_picture, blog_title, date, hash_tags } = props.blog;
+    const handleBookmark = props.handleBookmark;
+
     return (
         <div>
 
@@ -20,10 +22,11 @@ const Blog = ({ blog }) => {
                         <div className='flex flex-row gap-5 items-center'>
                             <p className='read-time'>{time} min read</p>
                             <section>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                                </svg>
-
+                                <button onClick={() => handleBookmark(props.blog)}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                                    </svg>
+                                </button>
                             </section>
                         </div>
                     </div>

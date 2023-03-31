@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookmarkedBlog = () => {
     return (
-        <div className='my-5 p-5 bg-slate-100 md:sticky md:top-20'>
+        <div className='my-5 p-5 bg-slate-100 md:sticky md:top-20 rounded-xl'>
             <div className=' mt-10'>
                 <h1 className='font-bold text-2xl'>Bookmarked Blogs : 8</h1>
             </div>

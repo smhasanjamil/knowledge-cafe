@@ -6,6 +6,13 @@ import BookmarkedBlog from '../BookmarkedBlog/BookmarkedBlog';
 
 const Main = () => {
     const [blogs, setBlog] = useState([]);
+    const [bookmark, setBookmark] = useState([]);
+
+    const handleBookmark = (blogs) => {
+        console.log(blogs)
+        // localStorage.setItem('blog', JSON.stringify(blogs));
+        
+    }
 
     useEffect(() => {
         fetch('data.json')
@@ -16,7 +23,7 @@ const Main = () => {
         <div className='grid grid-cols-12 md:gap-10 gap-y-10'>
             <div className='col-span-12 md:col-span-8'>
                 {
-                    blogs.map(blog => <Blog blog={blog} key={blog.id}></Blog>)
+                    blogs.map(blog => <Blog blog={blog} key={blog.id} handleBookmark={handleBookmark}></Blog>)
                 }
             </div>
             <div className='col-span-12 md:col-span-4'>

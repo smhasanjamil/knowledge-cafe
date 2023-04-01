@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookmarkedBlog = (props) => {
     const bookmarked = props.bookmark;
-    console.log(bookmarked)
+    // console.log(bookmarked)
     return (
         <div className='my-5 p-5 bg-slate-100 md:sticky md:top-20 rounded-xl'>
             <div className=' mt-10'>

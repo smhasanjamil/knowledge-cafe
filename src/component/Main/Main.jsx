@@ -7,6 +7,14 @@ import BookmarkedBlog from '../BookmarkedBlog/BookmarkedBlog';
 const Main = () => {
     const [blogs, setBlog] = useState([]);
     const [bookmark, setBookmark] = useState([]);
+    const [timeSpent, setTimespent] = useState([]);
+
+    const handleTotalSpent = (times) => {
+        const newTime = [...timeSpent, times]
+        setTimespent(newTime);
+        // console.log(blogs)
+        
+    }
 
     const handleBookmark = (blogs) => {
         // console.log(blogs)
@@ -24,12 +32,13 @@ const Main = () => {
         <div className='grid grid-cols-12 md:gap-10 gap-y-10'>
             <div className='col-span-12 md:col-span-8'>
                 {
-                    blogs.map(blog => <Blog blog={blog} key={blog.id} handleBookmark={handleBookmark}></Blog>)
+                    blogs.map(blog => <Blog blog={blog} key={blog.id} handleBookmark={handleBookmark} handleTotalSpent={handleTotalSpent}></Blog>)
                 }
             </div>
             <div className='col-span-12 md:col-span-4'>
-                <div>Selected Items: {bookmark.length}</div>
-                <TotalSpentTime bookmark={bookmark}></TotalSpentTime>
+                
+                {/* <TotalSpentTime bookmark={bookmark}></TotalSpentTime> */}
+                <TotalSpentTime timeSpent={timeSpent}></TotalSpentTime>
                 <BookmarkedBlog bookmark={bookmark}></BookmarkedBlog>
             </div>
 

@@ -4,6 +4,8 @@ import './Blog.css';
 const Blog = (props) => {
     const { id, auth_name, time, author_picture, blog_picture, blog_title, date, hash_tags } = props.blog;
     const handleBookmark = props.handleBookmark;
+    const handleTotalSpent = props.handleTotalSpent;
+    // console.log('Clicked',handleTotalSpent);
 
     return (
         <div>
@@ -36,7 +38,7 @@ const Blog = (props) => {
                         <div><p>#{hash_tags[1]}</p></div>
                     </div>
                     <div className="card-actions mb-10">
-                        <button className='text-blue-600/100 underline '>Mark as read</button>
+                        <button onClick={() => handleTotalSpent(props.blog)} className='text-blue-600/100 underline '>Mark as read</button>
                     </div>
                 </div>
             </div>

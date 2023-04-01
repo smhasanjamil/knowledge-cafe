@@ -1,4 +1,5 @@
 import React from 'react';
+import SingleBookmark from '../SingleBookmark/SingleBookmark';
 
 const BookmarkedBlog = (props) => {
     const bookmarked = props.bookmark;
@@ -10,11 +11,10 @@ const BookmarkedBlog = (props) => {
             </div>
 
             <div className='my-5'>
-                <div className="card w-full bg-base-100 shadow-xl">
-                    <div className="card-body">
-                        <h2 className="card-title">Blog title!</h2>
-                    </div>
-                </div>
+                {
+                    bookmarked.map(bookmarkedItem => <SingleBookmark bookmarkedItem={bookmarkedItem} key={bookmarkedItem.id} bookmark={props.bookmark}></SingleBookmark>)
+                }
+
             </div>
 
         </div>

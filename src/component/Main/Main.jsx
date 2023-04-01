@@ -3,6 +3,7 @@ import './Main.css';
 import Blog from '../Blog/Blog';
 import TotalSpentTime from '../TotalSpentTime/TotalSpentTime';
 import BookmarkedBlog from '../BookmarkedBlog/BookmarkedBlog';
+import { addToDb, getBlogCart } from '../../utilities/fakedb';
 
 const Main = () => {
     const [blogs, setBlog] = useState([]);
@@ -29,12 +30,14 @@ const Main = () => {
 
     }
 
+
     const handleBookmark = (blogs) => {
         // console.log(blogs)
-        // localStorage.setItem('blog', JSON.stringify(blogs));
         const newBookmark = [...bookmark, blogs];
         setBookmark(newBookmark);
+        addToDb(blogs.blog_title);
     }
+
 
     useEffect(() => {
         fetch('data.json')
@@ -52,6 +55,9 @@ const Main = () => {
 
                 {/* <TotalSpentTime bookmark={bookmark}></TotalSpentTime> */}
                 <TotalSpentTime timeSpent={timeSpent} readTime={readTime}></TotalSpentTime>
+                {
+
+                }
                 <BookmarkedBlog bookmark={bookmark}></BookmarkedBlog>
             </div>
 

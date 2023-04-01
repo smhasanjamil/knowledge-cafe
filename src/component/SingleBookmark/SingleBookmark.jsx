@@ -8,6 +8,7 @@ const SingleBookmark = ({ bookmarkedItem }) => {
             <div className="card w-full bg-base-100 shadow-xl">
                 <div className="card-body">
                     <p>{bookmarkedItem.blog_title}</p>
+                    {/* <p>{totalTime}</p> */}
                 </div>
             </div>
 

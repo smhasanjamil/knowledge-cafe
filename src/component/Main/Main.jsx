@@ -5,6 +5,11 @@ import TotalSpentTime from '../TotalSpentTime/TotalSpentTime';
 import BookmarkedBlog from '../BookmarkedBlog/BookmarkedBlog';
 import { addToDb, getBlogCart } from '../../utilities/fakedb';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const Main = () => {
     const [blogs, setBlog] = useState([]);
     const [bookmark, setBookmark] = useState([]);
@@ -32,10 +37,22 @@ const Main = () => {
 
 
     const handleBookmark = (blogs) => {
+        
         // console.log(blogs)
         const newBookmark = [...bookmark, blogs];
         setBookmark(newBookmark);
-        addToDb(blogs.blog_title);
+        addToDb(blogs);
+        toast("Bookmark Added!");
+        // const previousBookmark = JSON.parse(localStorage.getItem("bookmark"));
+        // if (previousBookmark) {
+        //     const sum = [...previousBookmark, blogs];
+        //     localStorage.setItem("bookmark", sum);
+        //     setBookmark(sum);
+        // }
+        // else {
+        //     localStorage.setItem("bookmark",JSON.stringify(blogs));
+        //     setBookmark(blogs);
+        // }
     }
 
 

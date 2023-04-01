@@ -8,12 +8,25 @@ const Main = () => {
     const [blogs, setBlog] = useState([]);
     const [bookmark, setBookmark] = useState([]);
     const [timeSpent, setTimespent] = useState([]);
+    const [readTime, setReadTime] = useState("");
 
     const handleTotalSpent = (times) => {
-        const newTime = [...timeSpent, times]
-        setTimespent(newTime);
-        // console.log(blogs)
-        
+
+        const previousTime = JSON.parse(localStorage.getItem("watchtime"));
+        if (previousTime) {
+            const sum = previousTime + times;
+            localStorage.setItem("watchtime", sum);
+            setReadTime(sum);
+        }
+        else {
+            localStorage.setItem("watchtime", times);
+            setReadTime(times);
+        }
+        // console.log(previousWatchTime)
+        // const newTime = [...timeSpent, times]
+        // setTimespent(newTime);
+
+
     }
 
     const handleBookmark = (blogs) => {
@@ -36,9 +49,9 @@ const Main = () => {
                 }
             </div>
             <div className='col-span-12 md:col-span-4'>
-                
+
                 {/* <TotalSpentTime bookmark={bookmark}></TotalSpentTime> */}
-                <TotalSpentTime timeSpent={timeSpent}></TotalSpentTime>
+                <TotalSpentTime timeSpent={timeSpent} readTime={readTime}></TotalSpentTime>
                 <BookmarkedBlog bookmark={bookmark}></BookmarkedBlog>
             </div>
 

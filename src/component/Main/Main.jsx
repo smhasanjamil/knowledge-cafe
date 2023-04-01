@@ -9,9 +9,10 @@ const Main = () => {
     const [bookmark, setBookmark] = useState([]);
 
     const handleBookmark = (blogs) => {
-        console.log(blogs)
+        // console.log(blogs)
         // localStorage.setItem('blog', JSON.stringify(blogs));
-        
+        const newBookmark = [...bookmark, blogs];
+        setBookmark(newBookmark);
     }
 
     useEffect(() => {
@@ -27,8 +28,9 @@ const Main = () => {
                 }
             </div>
             <div className='col-span-12 md:col-span-4'>
-                <TotalSpentTime></TotalSpentTime>
-                <BookmarkedBlog></BookmarkedBlog>
+                <div>Selected Items: {bookmark.length}</div>
+                <TotalSpentTime bookmark={bookmark}></TotalSpentTime>
+                <BookmarkedBlog bookmark={bookmark}></BookmarkedBlog>
             </div>
 
 
